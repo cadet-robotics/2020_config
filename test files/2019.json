@@ -1,0 +1,65 @@
+{
+	"DIO": [
+		{
+			"name":"YOU FELL FOR IT FOOL",
+			"description":"You thought it was digital IO, but it was ME! DIO!",
+			"value":"THUNDER CROSS SPLIT ATTACK"
+		}
+	],
+	"dio": [
+		{
+			"name":"top limit switch",
+			"description":"",
+			"value":"1"
+		},
+		{
+			"name":"proximity sensor 1",
+			"description":"",
+			"value":"9"
+		},
+		{
+			"name":"proximity sensor 2",
+			"description":"",
+			"value":"8"
+		},
+		{
+			"name":"proximity sensor 3",
+			"description":"",
+			"value":"7"
+		},
+		{
+			"name":"proximity sensor 4",
+			"description":"",
+			"value":"6"
+		},
+		{
+			"name":"proximity sensor 5",
+			"description":"",
+			"value":"5"
+		},
+		{
+			"name":"proximity sensor 6",
+			"description":"",
+			"value":"3"
+		},
+		{
+			"name":"bottom limit switch",
+			"description":"",
+			"value":"0"
+		}
+	],
+	"analog in": [
+		{
+			"name":"ball distance sensor",
+			"description":"",
+			"value":"0"
+		}
+	],
+	"pwm": [
+		{
+			"name":"front left",
+			"description":"",
+			"value":"
+		}
+	]
+}

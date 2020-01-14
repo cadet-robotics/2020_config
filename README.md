@@ -12,6 +12,7 @@ editor for configuring robots.
  * Parsing into values
    * Config entries are placed into json objects with a name, description, and value
    * This value must be extracted
+ * The API should eliminate the need for the Robot to use gson from its end
 
  # The GUI
   Requirements for the GUI include
@@ -25,3 +26,5 @@ editor for configuring robots.
 	  * Optional image highlighting (again see 2019 gui)
   * Other
     * Deploy to robot
+	
+	DOSBox (shared) (file://DESKTOP-29LSOS8/Users/Cadet%20Robotics/Desktop/DOSBox%20(shared))

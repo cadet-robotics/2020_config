@@ -1,0 +1,28 @@
+{
+  "": [
+    {
+      "name": "the void",
+      "description": "                  ",
+      "value": "null"
+    }
+  ],
+  "beans": [
+    {
+      "name": "beans",
+      "description": "beans",
+      "value": "beans"
+    }
+  ],
+  "config": [
+    {
+      "name": "beans",
+      "description": "the most holy food",
+      "value": "infinite"
+    },
+    {
+      "name": "jesus",
+      "description": "the son of the lord",
+      "value": "*religious noises*"
+    }
+  ]
+}
