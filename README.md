@@ -26,5 +26,3 @@ editor for configuring robots.
 	  * Optional image highlighting (again see 2019 gui)
   * Other
     * Deploy to robot
-	
-	DOSBox (shared) (file://DESKTOP-29LSOS8/Users/Cadet%20Robotics/Desktop/DOSBox%20(shared))
