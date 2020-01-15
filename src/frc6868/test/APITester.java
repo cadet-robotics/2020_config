@@ -16,5 +16,7 @@ public class APITester {
 		tcf.setEntry("beans", "beans", "beans", "beans");
 		System.out.println(tcf);
 		tcf.writeFile("beans.json", true);
+		
+		System.out.println(tcf.separateCategory("beans"));
 	}
 }

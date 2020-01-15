@@ -223,6 +223,15 @@ public class Config {
 		setEntry(name, description, Integer.toString(value));
 	}
 	
+	/**
+	 * Internal method to add an Entry object directly
+	 * 
+	 * @param entry
+	 */
+	protected void setEntry(ConfigEntry entry) {
+		entries.put(entry.getName(), entry);
+	}
+	
 	/*
 	 * Stuff to get information from entries
 	 */
@@ -335,6 +344,33 @@ public class Config {
 		}
 		
 		return categories;
+	}
+	
+	/**
+	 * Creates a new Config object with only the specified category
+	 * <p> The associated file location is changed to prevent lossy overwrites of the original
+	 * 
+	 * @param category
+	 * @return A separate instance of a category
+	 */
+	public Config separateCategory(String category) {
+		// Add the category to the file name and preserve the extension
+		String newFileLocation = configFileLocation.substring(0, configFileLocation.indexOf('.')) +
+								 "-" + category + configFileLocation.substring(configFileLocation.indexOf('.'));
+		
+		// New config object
+		Config ncgf = new Config(newFileLocation);
+		
+		// Add the category to the new object
+		for(String entryName : getEntryNames(category)) {
+			// Remove category from name
+			ConfigEntry ce = entries.get(entryName);
+			ce.setFullName(entryName.substring(entryName.indexOf(":") + 1));
+			
+			ncgf.setEntry(ce);
+		}
+		
+		return ncgf;
 	}
 	
 	@Override
