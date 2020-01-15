@@ -7,12 +7,13 @@
 editor for configuring robots.
  
 # The API
- Requirements for the API include
- * File IO (load JSON)
- * Parsing into values
-   * Config entries are placed into json objects with a name, description, and value
-   * This value must be extracted
- * The API should eliminate the need for the Robot to use gson from its end
+ The API can currently:
+ * Load files
+ * Save files
+ * Parse JSON to Entries
+ * Eliminate direct use of Gson
+ * Return values
+ * Return separate instances for categories
 
  # The GUI
   Requirements for the GUI include
