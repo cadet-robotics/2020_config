@@ -5,6 +5,9 @@
  
  The config system will be separated into two parts: The API and the GUI. The Config API will load and process files, and the GUI will provide a modular
 editor for configuring robots.
+
+## Installation
+ To use, add the .jar from the latest `Release`. Further, install Gson as a library, as this depends on it.
  
 # The API
  The API can currently:
