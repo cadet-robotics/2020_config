@@ -95,6 +95,8 @@ public class Config {
         return c;
     }
     
+    
+    
     /**
      * Writes the config to the file
      * 
@@ -111,7 +113,7 @@ public class Config {
             JsonArray catArray = new JsonArray();
             
             // Loop over entries of the category
-            for(String fullName : getEntryNames(cat)) {
+            for(String fullName : getFullEntryNames(cat)) {
                 ConfigEntry el = entries.get(fullName);
                 JsonObject entryObject = new JsonObject();
                 
@@ -232,6 +234,44 @@ public class Config {
         entries.put(entry.getName(), entry);
     }
     
+    /**
+     * Clears the entry in the given category with the given name
+     * 
+     * @param category
+     * @param name
+     */
+    public void clearEntry(String category, String name) {
+        if(category.equals("")) clearEntry(name);
+        else clearEntry(category + ":" + name);
+    }
+    
+    /**
+     * Clears the entry with the given name
+     * 
+     * @param name
+     */
+    public void clearEntry(String name) {
+        entries.remove(name);
+    }
+    
+    /**
+     * Clears all entries in the given category
+     * 
+     * @param category
+     */
+    public void clearEntries(String category) {
+        for(String name : getFullEntryNames(category)) {
+            entries.remove(name);
+        }
+    }
+    
+    /**
+     * Clears all entries in the Config
+     */
+    public void clearAllEntries() {
+        entries.clear();
+    }
+    
     /*
      * Stuff to get information from entries
      */
@@ -290,7 +330,7 @@ public class Config {
      * @param name
      * @return The description of the entry
      */
-    public String getDescription(String name) {
+    public String getDescription(String name) {	
         ConfigEntry entry = entries.get(name);
         
         if(entry == null) return null;
@@ -319,7 +359,7 @@ public class Config {
      * 
      * @return The set of entry names in the given category
      */
-    public Set<String> getEntryNames(String category) {
+    public Set<String> getFullEntryNames(String category) {
         // The streams filter the name sets
         if(category.equals("")) return entries.keySet().stream()
                                                        .filter(s -> !s.contains(":"))
@@ -362,7 +402,7 @@ public class Config {
         Config ncgf = new Config(newFileLocation);
         
         // Add the category to the new object
-        for(String entryName : getEntryNames(category)) {
+        for(String entryName : getFullEntryNames(category)) {
             // Remove category from name
             ConfigEntry ce = entries.get(entryName);
             ce.setFullName(entryName.substring(entryName.indexOf(":") + 1));
