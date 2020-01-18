@@ -347,7 +347,8 @@ public class Config {
      * @return The description of the entry
      */
     public String getDescription(String category, String name) {
-        return getDescription(category + ":" + name);
+        if(category.equals("")) return getDescription(name);
+        else return getDescription(category + ":" + name);
     }
     
     
