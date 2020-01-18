@@ -43,6 +43,7 @@ public class Config {
      */
     public Config() {
         configFileLocation = "";
+        entries = new HashMap<>();
     }
     
     
