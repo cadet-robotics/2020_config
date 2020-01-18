@@ -297,7 +297,8 @@ public class Config {
      * @return The value of the entry
      */
     public String getValue(String category, String name) {
-        return getValue(category + ":" + name);
+        if(category.equals("")) return getValue(name);
+        else return getValue(category + ":" + name);
     }
     
     /**
@@ -321,7 +322,8 @@ public class Config {
      * @return The integer value of the entry
      */
     public int getIntValue(String category, String name) {
-        return getIntValue(category + ":" + name);
+        if(category.equals("")) return getIntValue(name);
+        else return getIntValue(category + ":" + name);
     }
     
     /**
