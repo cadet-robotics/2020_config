@@ -355,7 +355,25 @@ public class Config {
      */
     
     /**
-     * Gets a set of all entry name in a category
+     * Gets a set of all entry names in a category
+     * 
+     * @param category
+     * @return The set of names in the given category
+     */
+    public Set<String> getEntryNames(String category) {
+        // Don't rewrite code
+        Set<String> names = getFullEntryNames(category);
+        
+        if(category.equals("")) return names;
+        
+        // Use streams to remove categories from the full names if necessary
+        else return names.stream()
+                         .map(n -> n.substring(n.indexOf(':') + 1))
+                         .collect(Collectors.toSet());
+    }
+    
+    /**
+     * Gets a set of all full entry name in a category
      * 
      * @return The set of entry names in the given category
      */
