@@ -26,6 +26,17 @@ public class ConfigEntry {
         this.value = value;
     }
     
+    /**
+     * Copy constructor
+     * 
+     * @param other The ConfigEntry to copy
+     */
+    protected ConfigEntry(ConfigEntry other) {
+    	this.name = other.name;
+    	this.description = other.description;
+    	this.value = other.value;
+    }
+    
     /*
      * Getters
      */

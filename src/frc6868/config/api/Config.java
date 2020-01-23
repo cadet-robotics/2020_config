@@ -426,7 +426,7 @@ public class Config {
         // Add the category to the new object
         for(String entryName : getFullEntryNames(category)) {
             // Remove category from name
-            ConfigEntry ce = entries.get(entryName);
+            ConfigEntry ce = new ConfigEntry(entries.get(entryName));
             ce.setFullName(entryName.substring(entryName.indexOf(":") + 1));
             
             ncgf.setEntry(ce);
