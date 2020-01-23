@@ -437,6 +437,8 @@ public class Config {
     
     @Override
     public String toString() {
+    	if(entries.keySet().size() == 0) return "[]";
+    	
         String s = "";
         
         for(String n : entries.keySet()) s += String.format("[%s], ", entries.get(n).toString());

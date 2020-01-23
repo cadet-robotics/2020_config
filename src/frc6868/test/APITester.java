@@ -12,7 +12,8 @@ import frc6868.config.api.Config;
 public class APITester {
     
     public static void main(String[] args) throws IOException {
-        Config tcf = new Config("test files/test.json").readFile();
+        Config tcf = new Config("test files/test.json");
+        tcf.readFile();
         tcf.setEntry("beans", "beans", "beans", "beans");
         System.out.println(tcf);
         tcf.writeFile("beans.json", true);
