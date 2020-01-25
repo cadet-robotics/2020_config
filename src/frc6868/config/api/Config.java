@@ -328,6 +328,56 @@ public class Config {
     }
     
     /**
+     * Gets the double value of the given entry, or 0 if it isn't found
+     * 
+     * @param name
+     * @return The double value of the entry
+     */
+    public double getDoubleValue(String name) {
+        String val = getValue(name);
+        
+        if(val == null) return 0;
+        else return Double.parseDouble(val);
+    }
+    
+    /**
+     * Gets the double value of the given entry, or 0 if it isn't found
+     * 
+     * @param category
+     * @param name
+     * @return The double value of the entry
+     */
+    public double getDoubleValue(String category, String name) {
+        if(category.equals("")) return getDoubleValue(name);
+        else return getDoubleValue(category + ":" + name);
+    }
+    
+    /**
+     * Gets the boolean value of the given entry, or false if it isn't found
+     * 
+     * @param name
+     * @return The boolean value of the entry
+     */
+    public boolean getBooleanValue(String name) {
+        String val = getValue(name);
+        
+        if(val == null) return false;
+        else return Boolean.parseBoolean(val);
+    }
+    
+    /**
+     * Gets the boolean value of the given entry, or false if it isn't found
+     * 
+     * @param category
+     * @param name
+     * @return The boolean value of the entry
+     */
+    public boolean getBooleanValue(String category, String name) {
+        if(category.equals("")) return getBooleanValue(name);
+        else return getBooleanValue(category + ":" + name);
+    }
+    
+    /**
      * Gets the description of the given entry, or null if it isn't found
      * 
      * @param name
