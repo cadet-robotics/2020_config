@@ -1,0 +1,53 @@
+{
+	"category_types": [
+		{
+			"name":"integer",
+			"value":"controls,can motors",
+			"description":""
+		},
+		{
+			"name":"string",
+			"value":"category_types,types,*",
+			"description":""
+		}
+	],
+	"types": [
+		{
+			"name":"integer",
+			"value":"int_text_entry",
+			"description":""
+		},
+		{
+			"name":"string",
+			"value":"text_entry",
+			"description":""
+		}
+	],
+	"category_images": [
+		{
+			"name":"controls",
+			"value":"",
+			"description":""
+		},
+		{
+			"name":"sensors",
+			"value":"",
+			"description":""
+		},
+		{
+			"name":"pwm motors",
+			"value":"",
+			"description":""
+		},
+		{
+			"name":"can motors",
+			"value":"",
+			"description":""
+		},
+		{
+			"name":"unknown",
+			"value":"",
+			"description":""
+		}
+	]
+}

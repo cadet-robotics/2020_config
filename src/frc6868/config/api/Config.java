@@ -205,6 +205,30 @@ public class Config {
     }
     
     /**
+     * Sets the given entry with the given description and double value
+     * 
+     * @param category
+     * @param name
+     * @param description
+     * @param value
+     */
+    public void setEntry(String category, String name, String description, double value) {
+        setEntry(category, name, description, Double.toString(value));
+    }
+    
+    /**
+     * Sets the given entry with the given description and boolean value
+     * 
+     * @param category
+     * @param name
+     * @param description
+     * @param value
+     */
+    public void setEntry(String category, String name, String description, boolean value) {
+        setEntry(category, name, description, Boolean.toString(value));
+    }
+    
+    /**
      * Sets the entry with the given name to have the given description and value
      * 
      * @param name
@@ -224,6 +248,28 @@ public class Config {
      */
     public void setEntry(String name, String description, int value) {
         setEntry(name, description, Integer.toString(value));
+    }
+    
+    /**
+     * Sets the given entry with the given description and double value
+     * 
+     * @param name
+     * @param description
+     * @param value
+     */
+    public void setEntry(String name, String description, double value) {
+        setEntry(name, description, Double.toString(value));
+    }
+    
+    /**
+     * Sets the given entry with the given description and boolean value
+     * 
+     * @param name
+     * @param description
+     * @param value
+     */
+    public void setEntry(String name, String description, boolean value) {
+        setEntry(name, description, Boolean.toString(value));
     }
     
     /**

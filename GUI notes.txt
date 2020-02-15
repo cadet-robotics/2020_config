@@ -1,0 +1,11 @@
+GUI SYSTEM NOTES
+
+REQUIREMENTS
+ - Generated panels for each part
+ - Use config for these
+   - This can edit itself oh boy
+ - Categories form tabs
+   - Each entry in a category is in a dropdown menu
+   - An entry's description is shown as flavortext
+   - Some menu for value selection depending on the type
+     - Determined by gui config
